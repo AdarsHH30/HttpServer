@@ -1,0 +1,13 @@
+{
+    "title": "Example Book",
+    "author": "John Doe",
+    "isbn": "123-4567890123",
+    "publishedDate": "2023-10-01",
+    "publisher": "Example Publisher",
+    "pages": 350,
+    "language": "English",
+    "genres": [
+        "Fiction",
+        "Adventure"
+    ]
+}
