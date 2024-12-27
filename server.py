@@ -64,7 +64,24 @@ while True:
             #respose to the client
             response=f"HTTP/1.1 200 OK\n\n{content}"
             #encode the response to bytes
-            
+        if path=="/about":
+            open_file=open("book.json")
+            content=open_file.read()
+            open_file.close()
+
+            #respose to the client
+            response=f"HTTP/1.1 200 OK\n\n{content}"
+            #encode the response to bytes
+    elif http_method == "POST":
+        if path == "/submit":
+            # Assuming the request body contains the data
+            body = request.split("\r\n\r\n")[1]
+            print(f"Received POST data: {body}")
+
+            # Respond to the client
+            response = "HTTP/1.1 200 OK\n\nData received"
+        else:
+            response = "HTTP/1.1 404 NOT FOUND\n\n"
     else:
         response="HTTP/1.1 404 NOT FOUND\n\n Allow only GET method"
     
